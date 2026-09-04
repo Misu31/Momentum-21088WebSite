@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Model contract sponsorizare | Momentum FTC 21088</title>
+    <style>
+      :root {
+        --ink: #111419;
+        --muted: #5b6472;
+        --line: #d9dee7;
+        --accent: #0b6b5b;
+        --paper: #ffffff;
+        --bg: #f2f4f7;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Segoe UI", Arial, sans-serif;
+        line-height: 1.55;
+      }
+
+      .toolbar {
+        position: sticky;
+        top: 0;
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(14px);
+      }
+
+      .toolbar-inner,
+      .contract {
+        width: min(100% - 32px, 920px);
+        margin: 0 auto;
+      }
+
+      .toolbar-inner {
+        min-height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      a,
+      button {
+        color: inherit;
+        font: inherit;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      button,
+      .back {
+        min-height: 40px;
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #ffffff;
+        padding: 0 12px;
+        cursor: pointer;
+      }
+
+      .contract {
+        margin-top: 32px;
+        margin-bottom: 48px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--paper);
+        padding: clamp(28px, 6vw, 64px);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2rem, 5vw, 3rem);
+        line-height: 1.05;
+      }
+
+      h2 {
+        margin: 32px 0 10px;
+        font-size: 1.1rem;
+        color: var(--accent);
+      }
+
+      p,
+      li {
+        color: var(--muted);
+      }
+
+      .meta {
+        margin-top: 12px;
+      }
+
+      .field {
+        color: var(--ink);
+        font-weight: 700;
+      }
+
+      .signatures {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+        margin-top: 48px;
+      }
+
+      .signature-box {
+        min-height: 120px;
+        border-top: 1px solid var(--ink);
+        padding-top: 10px;
+      }
+
+      @media (max-width: 680px) {
+        .toolbar-inner,
+        .signatures {
+          align-items: flex-start;
+          flex-direction: column;
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media print {
+        body {
+          background: #ffffff;
+        }
+
+        .toolbar {
+          display: none;
+        }
+
+        .contract {
+          width: 100%;
+          margin: 0;
+          border: 0;
+          border-radius: 0;
+          padding: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <div class="toolbar-inner">
+        <a class="back" href="../index.html#sponsori">Înapoi la site</a>
+        <button type="button" onclick="window.print()">Printează / Salvează PDF</button>
+      </div>
+    </div>
+
+    <main class="contract">
+      <p class="meta">Model orientativ pentru completare și verificare juridică</p>
+      <h1>Contract de sponsorizare</h1>
+      <p class="meta">
+        Încheiat astăzi, <span class="field">[data]</span>, între:
+      </p>
+
+      <h2>1. Partile contractului</h2>
+      <p>
+        <span class="field">Sponsor:</span> <span class="field">[denumirea companiei]</span>, cu sediul în
+        <span class="field">[adresa]</span>, CUI <span class="field">[CUI]</span>, reprezentată prin
+        <span class="field">[nume reprezentant]</span>, în calitate de <span class="field">[funcție]</span>.
+      </p>
+      <p>
+        <span class="field">Beneficiar:</span> <span class="field">[entitatea juridică ce poate primi sponsorizarea]</span>,
+        în sprijinul echipei Momentum FTC 21088 a Colegiului Național "Nicolae Iorga" din Brăila,
+        reprezentată prin <span class="field">[nume reprezentant]</span>.
+      </p>
+
+      <h2>2. Obiectul sponsorizarii</h2>
+      <p>
+        Sponsorul acordă beneficiarului o sponsorizare în valoare de
+        <span class="field">[suma în lei]</span> / constând în <span class="field">[bunuri sau servicii]</span>,
+        pentru susținerea activității educaționale și competiționale a echipei Momentum FTC 21088.
+      </p>
+
+      <h2>3. Destinatia fondurilor</h2>
+      <p>Sponsorizarea poate fi folosită pentru:</p>
+      <ul>
+        <li>piese mecanice, electronice, senzori și materiale pentru prototipare;</li>
+        <li>echipamente de atelier, consumabile și servicii tehnice;</li>
+        <li>transport, cazare, taxe și costuri logistice pentru competiții;</li>
+        <li>materiale de promovare, evenimente educaționale și activități de comunitate.</li>
+      </ul>
+
+      <h2>4. Vizibilitate si multumiri</h2>
+      <p>
+        Echipa Momentum poate menționa sponsorul în secțiunea dedicată partenerilor de pe site,
+        în materiale de prezentare, în postări publice și, după caz, pe robot, stand sau echipamente,
+        în limitele agreate de părți.
+      </p>
+
+      <h2>5. Durata</h2>
+      <p>
+        Contractul intră în vigoare la data semnării și este valabil până la
+        <span class="field">[data]</span> sau până la îndeplinirea obligațiilor asumate de părți.
+      </p>
+
+      <h2>6. Dispozitii finale</h2>
+      <p>
+        Orice modificare se face prin act adițional semnat de ambele părți. Prezentul model trebuie
+        verificat și adaptat de beneficiar în funcție de entitatea juridică prin care se primește
+        sponsorizarea.
+      </p>
+
+      <div class="signatures">
+        <div class="signature-box">
+          <strong>Sponsor</strong>
+          <p>Nume, funcție, semnătură, ștampilă</p>
+        </div>
+        <div class="signature-box">
+          <strong>Beneficiar</strong>
+          <p>Nume, funcție, semnătură, ștampilă</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
