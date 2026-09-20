@@ -21,12 +21,15 @@ Nu există React, build step sau dependențe. Site-ul folosește doar HTML, CSS 
 - `events`: rezultate de eveniment
 - `timeline`: sezoanele echipei
 - `impact`: ONCS, InfoEducație și alte rezultate în afara FTC
+- `projects`: cardurile de pe pagina `robots-projects.html`; `group` alege secțiunea (`ftc`, `competitions` sau `other`), iar fiecare proiect poate avea categorie, perioadă, titlu, descriere și imagine
 - `partners`: secțiunea de parteneriate
 - `sponsors`: imaginile și numele din logo wall-ul partenerilor
 - `contacts`: telefoane și emailuri
 - `social`: linkurile către Instagram și TikTok
 
 Pagina `news.html` este pagina evenimentului. Textele Lorem ipsum pot fi înlocuite direct în fișier, fără alte modificări.
+
+Pagina `robots-projects.html` grupează automat proiectele în „FIRST Tech Challenge”, „Olimpiade & Concursuri” și „Alte proiecte”. În fiecare secțiune apar câte două carduri pe rând, iar dacă grupul conține un număr impar de proiecte, ultimul card este centrat automat.
 
 În `partners.tiers`, categoria `Financial sponsor` este pentru firme care susțin direct financiar sezonul.
 

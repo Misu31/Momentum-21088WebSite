@@ -178,6 +178,42 @@ window.MOMENTUM_SITE = {
     }
   ],
 
+  // Adaugă aici proiectele în ordinea în care vrei să apară în fiecare secțiune.
+  // Valori group: "ftc", "competitions" sau "other".
+  // Câmpul image este opțional; lasă-l gol pentru un card cu fundal grafic.
+  projects: [
+    {
+      group: "ftc",
+      category: "Robot FTC",
+      period: "2025–2026",
+      title: "DECODE",
+      description:
+        "O iterație mai matură, construită pentru cicluri rapide, service ușor și performanță repetabilă pe terenul FTC.",
+      image: "assets/Screenshot_2026-01-31_214102.png",
+      imageAlt: "Robotul Momentum 21088 pe terenul de competiție"
+    },
+    {
+      group: "competitions",
+      category: "Proiect olimpic",
+      period: "ONCS & InfoEducație",
+      title: "Momentum",
+      description:
+        "Proiectul care a dus robotica, software-ul și documentația tehnică dincolo de terenul FTC, obținând rezultate la olimpiadele naționale.",
+      image: "assets/Screenshot_2026-04-19_210319.png",
+      imageAlt: "Robotul Momentum prezentat în cadrul unui proiect tehnic"
+    },
+    {
+      group: "other",
+      category: "Proiecte diverse",
+      period: "2025",
+      title: "S.Y.N.A.P.S.E.-VA",
+      description:
+        "Un model AI local dezvoltat de echipa, specializat pe inginerie mecanica, inginerie electrica, robotica si programare, care este antrenat de catre elevi prin proiectele pe care le realizeaza",
+      image: "assets/Screenshot_2026-04-19_210319.png",
+      imageAlt: "Modelul AI S.Y.N.A.P.S.E.-VA dezvoltat de echipa Momentum"    
+      }
+  ],
+
   partners: {
     title: "Partners & collaborators",
     text:
