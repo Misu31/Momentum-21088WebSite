@@ -404,7 +404,6 @@
         <div class="section-header narrow">
           <p class="eyebrow">Partners</p>
           <h2>Parteneri</h2>
-          <p>Un spațiu vizibil pentru partenerii care apar lângă Momentum. Imaginile sunt temporare și pot fi înlocuite direct din <code>assets/data.js</code>.</p>
         </div>
       </div>
       <div class="logo-wall" aria-label="Logo wall parteneri">
