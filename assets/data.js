@@ -209,7 +209,7 @@ window.MOMENTUM_SITE = {
       title: "S.Y.N.A.P.S.E.-VA",
       description:
         "Un model AI local dezvoltat de echipa, specializat pe inginerie mecanica, inginerie electrica, robotica si programare, care este antrenat de catre elevi prin proiectele pe care le realizeaza",
-      image: "assets/Screenshot_2026-04-19_210319.png",
+      image: "assets/Screenshot_20260920_2235011-removebg-preview.png",
       imageAlt: "Modelul AI S.Y.N.A.P.S.E.-VA dezvoltat de echipa Momentum"    
       }
   ],
