@@ -205,7 +205,7 @@ window.MOMENTUM_SITE = {
     {
       group: "other",
       category: "Proiecte diverse",
-      period: "2025",
+      period: "2026",
       title: "S.Y.N.A.P.S.E.-VA",
       description:
         "Un model AI local dezvoltat de echipa, specializat pe inginerie mecanica, inginerie electrica, robotica si programare, care este antrenat de catre elevi prin proiectele pe care le realizeaza",
