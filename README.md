@@ -31,6 +31,12 @@ Pagina `news.html` este pagina evenimentului. Textele Lorem ipsum pot fi înlocu
 
 Pagina `robots-projects.html` grupează automat proiectele în „FIRST Tech Challenge”, „Olimpiade & Concursuri” și „Alte proiecte”. În fiecare secțiune apar câte două carduri pe rând, iar dacă grupul conține un număr impar de proiecte, ultimul card este centrat automat.
 
+Fiecare card deschide `project.html?slug=...`, o pagină de detaliu cu format comun. Setează `slug` unic în `projects` din `assets/data.js` ca proiectul să aibă pagina sa. Galeria folosește `gallery`, o listă de imagini cu `src`, `alt` și `caption`; dacă lista lipsește, folosește imaginea principală `image`.
+
+## Stilul paginilor News și proiectelor
+
+În `assets/styles.css`, modifică `.news-title` pentru titlul paginii News, `.news-lede` pentru textul articolului, `.project-detail-title` pentru titlurile paginilor de proiect și `.project-detail-lede` pentru textul introductiv. Schimbă `font-size` pentru dimensiune și `color` pentru culoare. Culorile temei sunt definite la începutul fișierului ca variabile CSS, inclusiv `--ink`, `--muted` și `--blue`.
+
 În `partners.tiers`, categoria `Financial sponsor` este pentru firme care susțin direct financiar sezonul.
 
 ## Poze

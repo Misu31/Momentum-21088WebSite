@@ -1,6 +1,8 @@
 (function () {
   const root = document.querySelector("#projects-grid");
-  const projects = window.MOMENTUM_SITE?.projects || [];
+  const site = window.MOMENTUM_SITE || {};
+  const projects = site.projects || [];
+  const projectPagesEnabled = site.projectPagesEnabled !== false;
   const groups = [
     { id: "ftc", title: "FIRST Tech Challenge" },
     { id: "competitions", title: "Olimpiade & Concursuri" },
@@ -14,19 +16,26 @@
       ? `<img src="${project.image}" alt="${project.imageAlt || project.title}" loading="lazy">`
       : `<div class="project-visual-placeholder" aria-hidden="true">Momentum</div>`;
 
+    const cardContent = `
+      <figure class="project-visual">
+        ${visual}
+      </figure>
+      <div class="project-card-body">
+        <div class="project-meta">
+          <span>${project.category}</span>
+          <strong>${project.period}</strong>
+        </div>
+        <h3>${project.title}</h3>
+        <p>${project.description}</p>
+        ${projectPagesEnabled ? '<span class="project-card-cta">Descoperă proiectul <span aria-hidden="true">→</span></span>' : ""}
+      </div>
+    `;
+
     return `
       <article class="project-card">
-        <figure class="project-visual">
-          ${visual}
-        </figure>
-        <div class="project-card-body">
-          <div class="project-meta">
-            <span>${project.category}</span>
-            <strong>${project.period}</strong>
-          </div>
-          <h3>${project.title}</h3>
-          <p>${project.description}</p>
-        </div>
+        ${projectPagesEnabled
+          ? `<a class="project-card-link" href="project.html?slug=${encodeURIComponent(project.slug)}" aria-label="Deschide proiectul ${project.title}">${cardContent}</a>`
+          : cardContent}
       </article>
     `;
   }

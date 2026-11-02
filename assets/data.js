@@ -1,4 +1,7 @@
 window.MOMENTUM_SITE = {
+  // Setează true pentru a reactiva paginile individuale ale proiectelor.
+  projectPagesEnabled: false,
+
   team: {
     name: "Momentum",
     number: "21088",
@@ -7,9 +10,9 @@ window.MOMENTUM_SITE = {
     competition: "FIRST Tech Challenge",
     origin: "relansată în 2024",
     email: "momentumrobotics24@gmail.com",
-    heroLine: "FTC 21088 / Brăila / Colegiul Național \"Nicolae Iorga\"",
+    heroLine: "FIRST Tech Challenge 21088 / Brăila / Colegiul Național \"Nicolae Iorga\"",
     statement:
-      "Momentum este echipa de robotică FTC din Brăila care tratează robotul ca pe o mașină de competiție: proiectare, mecanică, software, strategie, testare și prezentare, toate într-un singur sezon.",
+      "Momentum este echipa de robotică FIRST Tech Challenge din Brăila care tratează robotul ca pe o mașină de competiție: proiectare, mecanică, software, strategie, testare și prezentare, toate într-un singur sezon.",
     motto: "Build fast. Drive smart. Iterate harder."
   },
 
@@ -42,7 +45,7 @@ window.MOMENTUM_SITE = {
 
   quickFacts: [
     { label: "Team No.", value: "21088" },
-    { label: "Program", value: "FTC" },
+    { label: "Program", value: "FIRST Tech Challenge  " },
     { label: "Home", value: "Brăila" },
     { label: "Since", value: "2024" }
   ],
@@ -183,6 +186,7 @@ window.MOMENTUM_SITE = {
   // Câmpul image este opțional; lasă-l gol pentru un card cu fundal grafic.
   projects: [
     {
+      slug: "decode",
       group: "ftc",
       category: "Robot FTC",
       period: "2025–2026",
@@ -190,9 +194,37 @@ window.MOMENTUM_SITE = {
       description:
         "O iterație mai matură, construită pentru cicluri rapide, service ușor și performanță repetabilă pe terenul FTC.",
       image: "assets/Screenshot_2026-01-31_214102.png",
-      imageAlt: "Robotul Momentum 21088 pe terenul de competiție"
+      imageAlt: "Modelul CAD al robotului Momentum pentru sezonul DECODE",
+      gallery: [
+        {
+          src: "assets/Screenshot_2026-01-31_214102.png",
+          alt: "Modelul CAD al robotului Momentum pentru sezonul DECODE",
+          caption: "Model CAD — proiectarea robotului"
+        },
+        {
+          src: "assets/1000090475.jpg",
+          alt: "Robot FTC pe terenul de competiție, lângă elemente de joc verzi și mov",
+          caption: "Robotul Momentum în acțiune"
+        },
+        {
+          src: "assets/1000090478.jpg",
+          alt: "Membru al echipei Momentum pregătind robotul pe teren",
+          caption: "Pregătirea robotului pentru meci"
+        },
+        {
+          src: "assets/1000090481.jpg",
+          alt: "Echipa Momentum concurând cu robotul la evenimentul FTC",
+          caption: "Momentum la competiție"
+        },
+        {
+          src: "assets/1000090490.jpg",
+          alt: "Terenul de competiție FTC și echipele pregătite pentru meci",
+          caption: "Pe terenul FTC"
+        }
+      ]
     },
     {
+      slug: "momentum-olympiads",
       group: "competitions",
       category: "Proiect olimpic",
       period: "ONCS & InfoEducație",
@@ -200,9 +232,22 @@ window.MOMENTUM_SITE = {
       description:
         "Proiectul care a dus robotica, software-ul și documentația tehnică dincolo de terenul FTC, obținând rezultate la olimpiadele naționale.",
       image: "assets/Screenshot_2026-04-19_210319.png",
-      imageAlt: "Robotul Momentum prezentat în cadrul unui proiect tehnic"
+      imageAlt: "Modelul CAD al robotului Momentum pentru proiectele de concurs",
+      gallery: [
+        {
+          src: "assets/Screenshot_2026-04-19_210319.png",
+          alt: "Model CAD al robotului Momentum cu mecanismele sale vizibile",
+          caption: "Model CAD — mecanismele proiectului"
+        },
+        {
+          src: "assets/Screenshot_20261102_232538.png",
+          alt: "Echipe și participanți la ceremonia de premiere RoboChallenge 2026",
+          caption: "Podium la RoboChallenge 2026"
+        }
+      ]
     },
     {
+      slug: "synapse-va",
       group: "other",
       category: "Proiecte diverse",
       period: "2026",
