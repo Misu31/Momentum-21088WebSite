@@ -13,6 +13,7 @@
     <link rel="apple-touch-icon" href="assets/favicon.png">
     <link rel="stylesheet" href="assets/styles.css">
     <script src="assets/main.js" defer></script>
+    <script src="assets/news-gallery.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#continut">Sari la conținut</a>
@@ -49,33 +50,63 @@
 
     <main id="continut">
       <section class="news-hero">
-        <div class="section-inner news-hero-grid">
-          <article class="news-article">
+        <div class="section-inner">
+          <div class="news-timeline-layout">
+            <span class="news-timeline-dot" aria-hidden="true"></span>
+            <article class="news-article">
             <p class="eyebrow">News / Eveniment Momentum</p>
             <h1 class="news-title">Argint pentru Momentum la RoboChallenge 2026: Peste șapte luni de muncă răsplătite pe podium</h1>
             <p class="news-lede">
               În luna noiembrie, echipa Momentum a urcat pe podium la una dintre cele mai mari competiții de profil din România, obținând locul 2 la categoria Freestyle Showcase Highschool în cadrul RoboChallenge 2026, eveniment găzduit de Universitatea Națională de Știință și Tehnologie POLITEHNICA București.
             </p>
-            <figure class="news-award-figure">
-              <img
-                src="assets/Screenshot_20261102_232538.png"
-                alt="Premierea echipelor la RoboChallenge 2026, cu reprezentanții Momentum pe podium"
-              >
-              <figcaption>Momentum — locul al II-lea, Freestyle Showcase Highschool</figcaption>
-            </figure>
+            <div class="news-gallery" data-news-gallery role="region" aria-roledescription="carusel" aria-label="Fotografii de la RoboChallenge 2026">
+              <figure class="news-award-figure">
+                <img
+                  src="assets/Screenshot_20261102_232538.png"
+                  alt="Premierea echipelor la RoboChallenge 2026, cu reprezentanții Momentum pe podium"
+                >
+                <figcaption>Momentum — locul al II-lea, Freestyle Showcase Highschool</figcaption>
+              </figure>
+            </div>
             <p class="news-lede">
               Acest rezultat nu a venit peste noapte, ci este rezultatul unui efort susținut care a început încă din primăvară. Mai exact, din luna aprilie, a fost inceput procesul lung de a aduce o idee de la stadiul de concept, la un sistem funcțional. Au urmat mai bine de șapte luni de muncă asiduă, în care fiecare etapă a însemnat proiectare, testare și zeci de iterații. De la asamblarea primelor piese și până la versiunea finală aliniată la start, proiectul a cerut sute de ore de dedicare, rezolvare a problemelor și o execuție meticuloasă din partea echipei.
             </p>
             <p class="news-lede">
               Poziția secundă pe podiumul de la UNSTPB reprezintă, înainte de toate, o validare clară a muncii pe care am aplicat-o în acest an. A fost un prilej excelent de a demonstra că perseverența pe termen lung și atenția la detalii aduc rezultate solide într-un mediu competițional riguros, recunoscut pentru standardele sale ridicate.
             </p>
+            <section class="news-related" aria-labelledby="news-related-title">
+              <h2 id="news-related-title">Mai multe despre participarea Momentum la RoboChallenge</h2>
+              <p>Articole și materiale publicate de presa locală și de partenerii noștri:</p>
+              <div class="news-related-links">
+                <a href="https://probr.ro/elevii-colegiului-national-nicolae-iorga-au-castigat-argintul-la-robochallenge-2026/" target="_blank" rel="noopener noreferrer" aria-label="Articol Pro Brăila despre rezultatul Momentum la RoboChallenge">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18M3 12h18"/></svg>
+                  <span>Pro Brăila</span>
+                </a>
+                <a href="https://www.instagram.com/p/DfSO6XQDWlz/?srtk=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" aria-label="Postare Instagram despre Momentum la RoboChallenge">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="icon-fill" cx="17.6" cy="6.6" r="1"/></svg>
+                  <span>Instagram</span>
+                </a>
+                <a href="https://observatornews.ro/eveniment/competitie-de-robotica-in-capitala-cu-participanti-din-34-de-tari-un-roman-de-5-ani-cel-mai-tanar-concurent-670983.html" target="_blank" rel="noopener noreferrer" aria-label="Articol Observator News despre RoboChallenge">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18M3 12h18"/></svg>
+                  <span>Observator News</span>
+                </a>
+                <a href="https://www.facebook.com/cnnibraila/posts/pfbid02Terp9qKYbUShatTgfXg7qhd2iceURcP4FzKHsQczsh3rP3GrC9G6bHQHek1EkjUgl" target="_blank" rel="noopener noreferrer" aria-label="Postare Facebook a Colegiului Național Nicolae Iorga">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.1 21v-8h2.7l.4-3.2h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2v2.3H8.3V13H11v8z"/></svg>
+                  <span>Facebook</span>
+                </a>
+              </div>
+            </section>
             <!--<p class="news-lede">
               Pentru a descoperi ce am construit în toate aceste luni și pentru a explora specificațiile tehnice și soluțiile software din spatele proiectului premiat, vizitați pagina
               <a href="robots-projects.html">Robots &amp; Projects</a>.
               >
             </p>
             -->
-          </article>
+            </article>
+            <time class="news-date" datetime="2026-11-02" aria-label="2 noiembrie 2026">
+              <span>2 noiembrie 2026</span>
+            </time>
+          </div>
         </div>
       </section>
     </main>
