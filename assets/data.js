@@ -178,6 +178,12 @@ window.MOMENTUM_SITE = {
       result: "Locul III",
       text:
         "La InfoEducație, proiectul Momentum a obținut locul III, confirmând valoarea integrării dintre software, robotică și prezentare tehnică. Rezultatul reflectă munca depusă pentru dezvoltarea codurilor autonome și teleoperate, a sistemelor de viziune și cinematică, dar și capacitatea proiectului de a continua dincolo de terenul de competiție FTC, într-o formă complexă și bine argumentată."
+    },
+    {
+      title: "RoboChallenge 2026",
+      result: "Locul II",
+      text:
+        "Echipa Momentum a participat la categoria Freestyle Showcase Highschool și a obținut locul al II-lea, prezentând robotul și soluțiile tehnice dezvoltate pe parcursul sezonului."
     }
   ],
 
@@ -248,6 +254,7 @@ window.MOMENTUM_SITE = {
     },
     {
       slug: "synapse-va",
+      pageEnabled: true,
       group: "other",
       category: "Proiecte diverse",
       period: "2026",
@@ -255,7 +262,10 @@ window.MOMENTUM_SITE = {
       description:
         "Un model AI local dezvoltat de echipa, specializat pe inginerie mecanica, inginerie electrica, robotica si programare, care este antrenat de catre elevi prin proiectele pe care le realizeaza",
       image: "assets/Screenshot_20260920_2235011-removebg-preview.png",
-      imageAlt: "Modelul AI S.Y.N.A.P.S.E.-VA dezvoltat de echipa Momentum"    
+      //image: "assets/Screenshot_20261107_200453.png",
+      //image: "assets/Screenshot_20261107_200615.png",
+      imageAlt: "Modelul AI S.Y.N.A.P.S.E.-VA dezvoltat de echipa Momentum"
+      
       }
   ],
 
@@ -270,7 +280,7 @@ window.MOMENTUM_SITE = {
       "vizibilitate clară pentru sponsori financiari și parteneri tehnici"
     ],
     tiers: [
-      {
+      /*{
         title: "Financial sponsor",
         text:
           "Susține direct sezonul prin sponsorizare financiară pentru piese, competiții, logistică și dezvoltarea robotului. Include vizibilitate în logo wall și materiale de echipă."
@@ -289,16 +299,19 @@ window.MOMENTUM_SITE = {
         title: "Season partner",
         text:
           "Sprijin pentru competiții, logistică, materiale de echipă și dezvoltarea robotului."
-      }
+      }*/
     ]
   },
 
   sponsors: [
     // Înlocuiește imaginile de mai jos cu logo-urile sponsorilor reali.
-    { name: "Colegiul National \"Nicolae Iorga\"", type: "Education partner", logo: "assets/CNNI.png" },
-    { name: "ISJ Braila", type: "Education partner", logo: "assets/250953752_381424643770450_6939612600140396142_n.jpg" },
-    { name: "Asociatia Stejarii", type: "Education partner", logo: "assets/Logo-stejarii@2x.png"},
-    { name: "Ianex SRL", type: "Financial sponsor", logo: "assets/ianex.jpg"}
+    { name: "Colegiul National \"Nicolae Iorga\"", logo: "assets/CNNI.png" },
+    { name: "Primaria Braila", logo: "assets/LOGO_3.webp"},
+    { name: "Colegiul National \"Nicolae Iorga\"", logo: "assets/CNNI.png" },
+    { name: "Primaria Braila", logo: "assets/LOGO_3.webp"},
+    
+    //{ name: "Asociatia Stejarii", type: "Education partner", logo: "assets/Logo-stejarii@2x.png"},
+    //{ name: "Ianex SRL", type: "Financial sponsor", logo: "assets/ianex.jpg"}
     //{ name: "Sponsor 05", type: "Community partner", logo: /*"https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=360&q=80"*/ "assets/auxi/images (9).jpg"},
     //{ name: "Sponsor 06", type: "Mobility partner", logo: /*"https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=360&q=80"*/ "assets/auxi/images.jpg"},
     //{ name: "Sponsor 07", type: "Digital partner", logo: /*"https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=360&q=80"*/ "assets/auxi/a.jpg"},

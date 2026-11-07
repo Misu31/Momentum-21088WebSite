@@ -3,10 +3,11 @@
   const projects = window.MOMENTUM_SITE?.projects || [];
   const slug = new URLSearchParams(window.location.search).get("slug");
   const project = projects.find((item) => item.slug === slug);
+  const projectPageEnabled = window.MOMENTUM_SITE?.projectPagesEnabled !== false || project?.pageEnabled === true;
 
   if (!root) return;
 
-  if (window.MOMENTUM_SITE?.projectPagesEnabled === false) {
+  if (!projectPageEnabled) {
     document.title = "Pagină temporar indisponibilă | Momentum FTC 21088";
     root.innerHTML = `
       <section class="project-detail-content">
@@ -64,11 +65,11 @@
       <div class="project-gallery${slides.length > 1 ? " has-multiple-slides" : " is-single-slide"}" data-project-gallery>
         <div class="project-gallery-stage" data-gallery-stage tabindex="0" aria-label="Galerie foto ${project.title}">
           <button class="project-gallery-arrow project-gallery-arrow--previous" type="button" data-gallery-previous aria-label="Imaginea anterioară">
-            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M30 8 14 24l16 16" /></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 3 6 12l9.5 9 2.5-2.7-6.7-6.3 6.7-6.3z" /></svg>
           </button>
-          <img class="project-gallery-image" data-gallery-image src="${slides[0].src}" alt="${slides[0].alt}" aria-live="polite">
+          <img class="project-gallery-image" data-gallery-image src="${slides[0].src}" alt="${slides[0].alt}" aria-live="polite" role="button" tabindex="0" aria-haspopup="dialog" title="Deschide fotografia pentru zoom">
           <button class="project-gallery-arrow project-gallery-arrow--next" type="button" data-gallery-next aria-label="Imaginea următoare">
-            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="m18 8 16 16-16 16" /></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 3 18 12l-9.5 9L6 18.3l6.7-6.3L6 5.7z" /></svg>
           </button>
         </div>
         <div class="project-gallery-bar">
@@ -86,7 +87,7 @@
     <article class="project-detail-page">
       <section class="project-detail-content">
         <div class="section-inner">
-          <a class="project-back-link" href="robots-projects.html">← Toate proiectele</a>
+          <a class="project-back-link" href="robots-projects.html"> < Toate proiectele</a>
           <div class="project-overview-card">
             <p class="eyebrow">${project.category}</p>
             <h1 class="project-detail-title">${project.title}</h1>
@@ -130,8 +131,30 @@
   thumbs.forEach((thumb) => {
     thumb.addEventListener("click", () => showSlide(Number(thumb.dataset.galleryThumb)));
   });
-  galleryElement.querySelector("[data-gallery-stage]").addEventListener("keydown", (event) => {
+  const stage = galleryElement.querySelector("[data-gallery-stage]");
+  stage.addEventListener("keydown", (event) => {
     if (event.key === "ArrowLeft") showSlide(activeIndex - 1);
     if (event.key === "ArrowRight") showSlide(activeIndex + 1);
   });
+
+  let touchStartX = null;
+  let touchStartY = null;
+  stage.addEventListener("touchstart", (event) => {
+    const touch = event.changedTouches[0];
+    touchStartX = touch?.clientX ?? null;
+    touchStartY = touch?.clientY ?? null;
+  }, { passive: true });
+  stage.addEventListener("touchend", (event) => {
+    if (touchStartX === null || touchStartY === null) return;
+    const touch = event.changedTouches[0];
+    const deltaX = touch.clientX - touchStartX;
+    const deltaY = touch.clientY - touchStartY;
+    if (Math.abs(deltaX) > 45 && Math.abs(deltaX) > Math.abs(deltaY)) {
+      showSlide(activeIndex + (deltaX < 0 ? 1 : -1));
+      stage.dataset.swipeSuppressed = "true";
+      window.setTimeout(() => delete stage.dataset.swipeSuppressed, 400);
+    }
+    touchStartX = null;
+    touchStartY = null;
+  }, { passive: true });
 })();

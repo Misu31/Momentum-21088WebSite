@@ -28,7 +28,7 @@
   let current = 0;
   gallery.innerHTML = `
     <figure class="news-award-figure">
-      <img class="news-gallery-image" alt="">
+      <img class="news-gallery-image" alt="" role="button" tabindex="0" aria-haspopup="dialog" title="Deschide fotografia pentru zoom">
       <figcaption></figcaption>
     </figure>
     <div class="news-gallery-controls" role="group" aria-label="Navigare fotografii">
@@ -93,14 +93,24 @@
   });
 
   let touchStartX = null;
+  let touchStartY = null;
   image.addEventListener("touchstart", (event) => {
-    touchStartX = event.changedTouches[0]?.clientX ?? null;
+    const touch = event.changedTouches[0];
+    touchStartX = touch?.clientX ?? null;
+    touchStartY = touch?.clientY ?? null;
   }, { passive: true });
   image.addEventListener("touchend", (event) => {
-    if (touchStartX === null) return;
-    const delta = event.changedTouches[0].clientX - touchStartX;
-    if (Math.abs(delta) > 45) show(current + (delta < 0 ? 1 : -1));
+    if (touchStartX === null || touchStartY === null) return;
+    const touch = event.changedTouches[0];
+    const deltaX = touch.clientX - touchStartX;
+    const deltaY = touch.clientY - touchStartY;
+    if (Math.abs(deltaX) > 45 && Math.abs(deltaX) > Math.abs(deltaY)) {
+      show(current + (deltaX < 0 ? 1 : -1));
+      image.dataset.swipeSuppressed = "true";
+      window.setTimeout(() => delete image.dataset.swipeSuppressed, 400);
+    }
     touchStartX = null;
+    touchStartY = null;
   }, { passive: true });
 
   show(0);

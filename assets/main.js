@@ -211,7 +211,6 @@
       <article class="sponsor-card" aria-label="${sponsor.name}">
         ${logo}
         <div>
-          <span>${sponsor.type}</span>
           <h3>${sponsor.name}</h3>
         </div>
       </article>
@@ -402,8 +401,8 @@
     <section class="section-block sponsor-section" id="sponsori">
       <div class="section-inner">
         <div class="section-header narrow">
-          <p class="eyebrow">Partners</p>
-          <h2>Parteneri</h2>
+          <p class="eyebrow">Partners & Sponsors</p>
+          <h2>Sponsori & Parteneri</h2>
         </div>
       </div>
       <div class="logo-wall" aria-label="Logo wall parteneri">

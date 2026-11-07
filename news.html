@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="assets/styles.css">
     <script src="assets/main.js" defer></script>
     <script src="assets/news-gallery.js" defer></script>
+    <script src="assets/image-lightbox.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#continut">Sari la conținut</a>
@@ -62,8 +63,13 @@
             <div class="news-gallery" data-news-gallery role="region" aria-roledescription="carusel" aria-label="Fotografii de la RoboChallenge 2026">
               <figure class="news-award-figure">
                 <img
+                  class="news-gallery-image"
                   src="assets/Screenshot_20261102_232538.png"
                   alt="Premierea echipelor la RoboChallenge 2026, cu reprezentanții Momentum pe podium"
+                  role="button"
+                  tabindex="0"
+                  aria-haspopup="dialog"
+                  title="Deschide fotografia pentru zoom"
                 >
                 <figcaption>Momentum — locul al II-lea, Freestyle Showcase Highschool</figcaption>
               </figure>

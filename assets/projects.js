@@ -12,6 +12,7 @@
   if (!root) return;
 
   function renderProject(project) {
+    const canOpenProject = projectPagesEnabled || project.pageEnabled === true;
     const visual = project.image
       ? `<img src="${project.image}" alt="${project.imageAlt || project.title}" loading="lazy">`
       : `<div class="project-visual-placeholder" aria-hidden="true">Momentum</div>`;
@@ -27,13 +28,13 @@
         </div>
         <h3>${project.title}</h3>
         <p>${project.description}</p>
-        ${projectPagesEnabled ? '<span class="project-card-cta">Descoperă proiectul <span aria-hidden="true">→</span></span>' : ""}
+        ${canOpenProject ? '<span class="project-card-cta">Descoperă proiectul <span aria-hidden="true">></span></span>' : ""}
       </div>
     `;
 
     return `
       <article class="project-card">
-        ${projectPagesEnabled
+        ${canOpenProject
           ? `<a class="project-card-link" href="project.html?slug=${encodeURIComponent(project.slug)}" aria-label="Deschide proiectul ${project.title}">${cardContent}</a>`
           : cardContent}
       </article>
